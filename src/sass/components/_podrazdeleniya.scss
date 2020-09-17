@@ -1,0 +1,17 @@
+.Podrazdeleniya {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &-Item {
+    width: 24%;
+  }
+
+  &-Img {
+    transition: opacity ease-out 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

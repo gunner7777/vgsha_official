@@ -1,0 +1,124 @@
+.Socials {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  &-Link {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    @extend %fa-icon;
+    @extend .fab;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $secondary-text;
+    border-radius: 50%;
+    background-color: $secondary-bg;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_Vk {
+      &:before {
+        content: fa-content($fa-var-vk);
+        color: $vk;
+      }
+
+      &:hover {
+        background-color: $vk;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+    }
+
+    &_Instagram {
+      &:before {
+        content: fa-content($fa-var-instagram);
+        color: $inst;
+      }
+      &:hover {
+        background-color: $inst;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+    }
+
+    &_Youtube {
+      &:before {
+        content: fa-content($fa-var-youtube);
+        color: $yb;
+      }
+      &:hover {
+        background-color: $yb;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+    }
+
+    &_Twitter {
+      &:before {
+        content: fa-content($fa-var-twitter);
+        color: $tw;
+      }
+      &:hover {
+        background-color: $tw;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+    }
+
+    &_Facebook {
+      &:before {
+        content: fa-content($fa-var-facebook-f);
+        color: $fb;
+      }
+      &:hover {
+        background-color: $fb;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+    }
+  }
+}
+
+@include mq-max(1140px) {
+  .Socials {
+    margin-right: 20px;
+    margin-left: 20px;
+    &-Link {
+      margin-right: 7px;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .Socials {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 49%;
+    justify-content: flex-end;
+  }
+}
+
+@include mq-max(575px) {
+  .Socials {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+}

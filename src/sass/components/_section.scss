@@ -1,0 +1,55 @@
+.Section {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &-Title {
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+  }
+
+  &-ShowAll {
+    display: inline-block;
+    position: relative;
+    color: $primary-active-elements;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 1px solid $primary-active-elements;
+    padding-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 0.3s;
+
+    &:hover {
+      color: $primary-accent-2;
+      border-bottom: 1px solid $primary-accent-2;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .Section {
+    &-Title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Section {
+    &-ShowAll {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Section {
+    &-Title {
+      font-size: 1.2rem;
+    }
+    &-ShowAll {
+      font-size: 1.2rem;
+    }
+  }
+}

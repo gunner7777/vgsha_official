@@ -1,0 +1,43 @@
+/*
+Theme Name: Seyatel
+Author: BuzmakovVI
+Description: Seyatel theme
+Version: 0.1.0
+Text Domain: seyatel
+*/
+@import "./fontawesome/fontawesome";
+@import "./fontawesome/brands";
+@import "./fontawesome/regular";
+@import "./fontawesome/solid";
+
+@import "../../node_modules/normalize.css/normalize.css";
+
+@import "./utils/mixin";
+
+/* base */
+@import "./base/colors";
+@import "./base/vars";
+@import "./base/reset";
+@import "./base/grid";
+@import "./base/common";
+@import "./base/fonts";
+
+/* components */
+@import "./components/topbar";
+@import "./components/topMenu";
+@import "./components/socials";
+@import "./components/topBarServices";
+@import "./components/header";
+@import "./components/logo";
+@import "./components/mainMenu";
+@import "./components/subMenu";
+@import "./components/section";
+@import "./components/popularInfo";
+@import "./components/anons";
+@import "./components/news";
+@import "./components/tags";
+@import "./components/podrazdeleniya";
+@import "./components/partners";
+@import "./components/footer";
+@import "./components/footerSection";
+@import "./components/copyright";

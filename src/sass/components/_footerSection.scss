@@ -1,0 +1,72 @@
+.FooterSection {
+  &-Title {
+    margin-bottom: 15px;
+  }
+  &-Item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 7px;
+    color: $secondary-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-Icon {
+    @extend %fa-icon;
+    @extend .fas;
+    font-size: 1.3rem;
+    margin-right: 5px;
+
+    &_Home {
+      &:before {
+        content: fa-content($fa-var-home);
+      }
+    }
+
+    &_Mail {
+      &:before {
+        content: fa-content($fa-var-envelope);
+      }
+    }
+
+    &_Phone {
+      &:before {
+        content: fa-content($fa-var-phone);
+      }
+    }
+  }
+
+  &-Link {
+    color: $secondary-text;
+  }
+}
+
+@include mq-max(767px) {
+  .FooterSection {
+    margin-bottom: 15px;
+
+    &-Title {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .FooterSection {
+    &-Title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(400px) {
+  .FooterSection {
+    &-Icon {
+      display: none;
+    }
+  }
+}

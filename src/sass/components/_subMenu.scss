@@ -1,0 +1,70 @@
+.SubMenu {
+  height: 0px;
+  position: absolute;
+  background-color: $secondary-bg;
+  border: 1px solid $primary-accent-2;
+  border-top: none;
+  width: 100%;
+  left: 0;
+  padding: 15px 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  z-index: 2;
+  overflow: hidden;
+  visibility: hidden;
+
+  &_Show {
+    height: auto;
+    visibility: visible;
+  }
+
+  &:hover {
+    height: auto;
+    visibility: visible;
+  }
+
+  &-Item {
+    width: 33%;
+    padding: 5px 10px;
+  }
+
+  &-Link {
+    display: block;
+    padding: 10px 0;
+    color: $primary-text;
+    transition: color 0.2s ease;
+    //text-transform: uppercase;
+
+    &:hover {
+      color: $primary-active-elements;
+    }
+  }
+}
+
+@include mq-max(920px) {
+  .SubMenu {
+    flex-flow: column nowrap;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    position: relative;
+    width: calc(100% - 35px);
+    margin-left: 30px;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    &-Item {
+      width: 100%;
+      padding: 0;
+    }
+
+    &-Link {
+      &:hover {
+        background-color: inherit;
+        color: $primary-accent-3;
+      }
+    }
+  }
+}

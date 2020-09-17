@@ -1,0 +1,123 @@
+.TopBarServices {
+  width: 27%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  &-Icon {
+    @extend %fa-icon;
+    @extend .fas;
+    font-size: 1.2rem;
+    color: $secondary-text;
+    margin-left: 15px;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+      margin-left: 7px;
+    }
+
+    &_Search {
+      &:before {
+        content: fa-content($fa-var-search);
+      }
+      &_Hide {
+        display: none;
+      }
+    }
+
+    &_Blind {
+      &:before {
+        content: fa-content($fa-var-eye);
+      }
+    }
+    &_EnterServices {
+      &:before {
+        content: fa-content($fa-var-user);
+      }
+    }
+  }
+
+  &-Search {
+    position: relative;
+    display: none;
+
+    &_Active {
+      display: block;
+    }
+  }
+
+  &-SearchHide {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: $secondary-bg;
+    @extend %fa-icon;
+    @extend .fas;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:before {
+      content: fa-content($fa-var-chevron-right);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $brown;
+      cursor: pointer;
+    }
+  }
+
+  &-SearchInput {
+    height: 25px;
+    width: 100%;
+    border: none;
+  }
+}
+
+@include mq-max(991px) {
+  .TopBarServices {
+    width: 49%;
+    justify-content: flex-start;
+  }
+}
+
+@include mq-max(767px) {
+  .TopBarServices {
+    &-Search {
+      display: block;
+    }
+
+    &-Icon {
+      &_Search {
+        display: none;
+      }
+    }
+
+    &-SearchHide {
+      display: none;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .TopBarServices {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+    margin-bottom: 15px;
+
+    &-Icon {
+      margin-left: 10px;
+    }
+  }
+}
+
+@include mq-max(274px) {
+  .TopBarServices {
+    &-Search {
+      width: 70%;
+    }
+  }
+}

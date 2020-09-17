@@ -1,0 +1,103 @@
+.News {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &-Single {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 32%;
+    margin-bottom: 30px;
+  }
+
+  &-SingleInner {
+    position: relative;
+
+    &:hover {
+      .News-Title {
+        //color: $primary-active-elements;
+        background-color: $brown;
+      }
+    }
+  }
+
+  &-Title {
+    //margin-bottom: 10px;
+    position: absolute;
+    top: -10px;
+    background-color: $red;
+    padding: 5px;
+    font-size: 1.3rem;
+    color: $secondary-text;
+    font-weight: 600;
+    transition: background-color ease 0.3s;
+
+    &:hover {
+      //color: $primary-active-elements;
+      background-color: $brown;
+    }
+  }
+
+  &-Date {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    max-width: 100px;
+    padding: 4px;
+    border-radius: $border-radius;
+    background-color: rgba($primary-accent-1, 0.75);
+    color: $secondary-text;
+  }
+
+  &-Tags {
+    margin-top: 7px;
+  }
+}
+
+@include mq-max(767px) {
+  .News {
+    &-Single {
+      width: 49%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &-Title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .News {
+    &-Single {
+      width: 100%;
+
+      &:last-child {
+        display: block;
+      }
+    }
+
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(430px) {
+  .News {
+    &-Title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(330px) {
+  .News {
+    &-Title {
+      font-size: 1.1rem;
+    }
+  }
+}

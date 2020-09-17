@@ -1,0 +1,10 @@
+.Partners {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &-Item {
+    width: 8%;
+  }
+}

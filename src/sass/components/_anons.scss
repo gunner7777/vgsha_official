@@ -1,0 +1,90 @@
+.Anons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &-Item {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 49%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    //transition: all 0.6s ease-out;
+
+    &:hover {
+      & img {
+        opacity: 0.85;
+      }
+
+      & h3 {
+        color: $red;
+      }
+    }
+
+    & > div:first-child {
+      max-width: 200px;
+      width: 40%;
+      margin-right: 15px;
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+    }
+    & > div:last-child {
+      width: 60%;
+    }
+    & h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      transition: color 0.3s ease-out;
+    }
+
+    & p {
+      background-color: rgba($red, 0.8);
+      border-radius: $border-radius;
+      text-align: center;
+      color: $secondary-text;
+      padding: 4px;
+      max-width: 100px;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Anons {
+    flex-flow: column wrap;
+    &-Item {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .Anons {
+    &-Item {
+      flex-flow: column wrap;
+
+      & > div:first-child {
+        max-width: 400px;
+      }
+
+      & > div:first-child,
+      & > div:last-child {
+        width: 100%;
+      }
+
+      & h3 {
+        margin-top: 7px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}

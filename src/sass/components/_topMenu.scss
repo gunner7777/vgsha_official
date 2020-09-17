@@ -1,0 +1,99 @@
+.TopMenu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &-Item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-Link {
+    color: $secondary-text;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease-out;
+
+    &:hover {
+      border-bottom: 1px solid $secondary-text;
+    }
+  }
+}
+
+@include mq-max(1140px) {
+  .TopMenu {
+    &-Item {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include mq-max(1079px) {
+  .TopMenu {
+    &-Item {
+      margin-right: 15px;
+    }
+  }
+}
+
+@include mq-max(1079px) {
+  .TopMenu {
+    &-Link {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .TopMenu {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    &-Link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .TopMenu {
+    order: 2;
+  }
+}
+
+@include mq-max(540px) {
+  .TopMenu {
+    flex-flow: row wrap;
+
+    &-Item {
+      margin-right: 0;
+      margin-bottom: 7px;
+      width: 48%;
+      text-align: center;
+    }
+
+    &-Link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(400px) {
+  .TopMenu {
+    &-Link {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include mq-max(320px) {
+  .TopMenu {
+    &-Item {
+      width: 100%;
+    }
+  }
+}

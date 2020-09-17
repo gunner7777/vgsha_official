@@ -1,0 +1,20 @@
+.TopBar {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  //height: 30px;
+
+  &-Outer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $primary-bg;
+  }
+}
+
+@include mq-max(1230px) {
+  .TopBar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

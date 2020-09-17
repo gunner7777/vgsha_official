@@ -1,0 +1,19 @@
+.Footer {
+  position: relative;
+  color: $secondary-text;
+  padding-bottom: 15px;
+  padding-top: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &-Outer {
+    background-color: $primary-bg;
+  }
+
+  /*  &-Sections {
+    position: relative;
+  } */
+}

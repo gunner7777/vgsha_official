@@ -1,0 +1,119 @@
+.Logo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &-Img {
+    max-width: 180px;
+    width: 180px;
+    margin-right: 25px;
+  }
+
+  &-Text {
+    font-family: "Raleway", "Helvetica", Arial sans-serif;
+    font-weight: 500;
+    color: $primary-text;
+    min-width: 600px;
+    width: 50%;
+  }
+
+  &-Title {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+}
+
+@include mq-max(991px) {
+  .Logo {
+    &-Img {
+      width: 170px;
+      margin-right: 20px;
+    }
+
+    &-Title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(800px) {
+  .Logo {
+    &-Img {
+      width: 160px;
+    }
+
+    &-Text {
+      min-width: 100px;
+      width: 80%;
+    }
+
+    &-Title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Logo {
+    &-Img {
+      width: 140px;
+      margin-right: 15px;
+    }
+
+    &-Title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq-max(660px) {
+  .Logo {
+    &-Img {
+      width: 120px;
+    }
+
+    &-SubTitle {
+      font-size: 0.9rem;
+    }
+
+    &-Title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(593px) {
+  .Logo {
+    &-SubTitle {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Logo {
+    flex-flow: column nowrap;
+
+    &-Img {
+      width: 140px;
+      margin-bottom: 15px;
+    }
+
+    &-Text {
+      text-align: center;
+      width: 100%;
+    }
+    &-SubTitle {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include mq-max(280px) {
+  .Logo {
+    &-Title {
+      font-size: 1rem;
+    }
+  }
+}
