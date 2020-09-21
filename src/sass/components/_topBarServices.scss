@@ -85,31 +85,36 @@
 
 @include mq-max(767px) {
   .TopBarServices {
-    &-Search {
+    /* &-Search {
       display: block;
-    }
+    } */
 
-    &-Icon {
+    /* &-Icon {
       &_Search {
         display: none;
       }
-    }
+    } */
 
-    &-SearchHide {
+    /* &-SearchHide {
       display: none;
-    }
+    } */
   }
 }
 
 @include mq-max(575px) {
   .TopBarServices {
     width: 100%;
+    position: relative;
     justify-content: center;
     order: 1;
     margin-bottom: 15px;
 
     &-Icon {
       margin-left: 10px;
+
+      &_Search {
+        display: none;
+      }
     }
   }
 }

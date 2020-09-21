@@ -1,14 +1,17 @@
 .Search {
-  position: relative;
+  position: absolute;
   display: none;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
 
   &_Active {
     display: block;
   }
 
   &-Hide {
-    width: 25px;
-    height: 25px;
+    min-width: 30px;
+    height: 100%;
     border: none;
     background-color: $secondary-bg;
     @extend %fa-icon;
@@ -23,21 +26,53 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: $brown;
+      color: $primary-accent-2;
       cursor: pointer;
     }
   }
 
   &-Input {
-    height: 25px;
+    height: 30px;
+    padding-left: 35px;
     width: 100%;
     border: none;
+    font-size: 1.1rem;
+  }
+
+  &-Button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 30px;
+    cursor: pointer;
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+      color: $primary-accent-2;
+      content: fa-content($fa-var-search);
+    }
   }
 }
 
 @include mq-max(767px) {
   .Search {
+    &-Input {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Search {
     display: block;
+    position: relative;
+    width: 60%;
+    left: 0;
+    transform: translateX(0);
 
     &-Hide {
       display: none;
