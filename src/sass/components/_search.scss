@@ -1,0 +1,52 @@
+.Search {
+  position: relative;
+  display: none;
+
+  &_Active {
+    display: block;
+  }
+
+  &-Hide {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: $secondary-bg;
+    @extend %fa-icon;
+    @extend .fas;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:before {
+      content: fa-content($fa-var-chevron-right);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $brown;
+      cursor: pointer;
+    }
+  }
+
+  &-Input {
+    height: 25px;
+    width: 100%;
+    border: none;
+  }
+}
+
+@include mq-max(767px) {
+  .Search {
+    display: block;
+
+    &-Hide {
+      display: none;
+    }
+  }
+}
+
+@include mq-max(274px) {
+  .Search {
+    width: 70%;
+  }
+}

@@ -10,7 +10,7 @@ Text Domain: seyatel
 @import "./fontawesome/regular";
 @import "./fontawesome/solid";
 
-@import "../../node_modules/normalize.css/normalize.css";
+//@import "../../node_modules/normalize.css/normalize.css";
 
 @import "./utils/mixin";
 
@@ -27,6 +27,7 @@ Text Domain: seyatel
 @import "./components/topMenu";
 @import "./components/socials";
 @import "./components/topBarServices";
+@import "./components/search";
 @import "./components/header";
 @import "./components/logo";
 @import "./components/mainMenu";

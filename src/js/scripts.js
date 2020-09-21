@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
   topbarSearch.addEventListener("click", (e) => {
     if (e.target.classList.contains("TopBarServices-Icon_Search")) {
       e.target.parentNode
-        .querySelector(".TopBarServices-Search")
-        .classList.add("TopBarServices-Search_Active");
+        .querySelector(".Search")
+        .classList.add("Search_Active");
       e.target.classList.add("TopBarServices-Icon_Search_Hide");
     }
 
-    if (e.target.classList.contains("TopBarServices-SearchHide")) {
+    if (e.target.classList.contains("Search-Hide")) {
       e.target.parentNode.parentNode
-        .querySelector(".TopBarServices-Search")
-        .classList.remove("TopBarServices-Search_Active");
+        .querySelector(".Search")
+        .classList.remove("Search_Active");
       e.target.parentNode.parentNode
         .querySelector(".TopBarServices-Icon_Search")
         .classList.remove("TopBarServices-Icon_Search_Hide");

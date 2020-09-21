@@ -38,16 +38,16 @@
     }
   }
 
-  &-Search {
+  /* &-Search {
     position: relative;
     display: none;
 
     &_Active {
       display: block;
     }
-  }
+  } */
 
-  &-SearchHide {
+  /* &-SearchHide {
     width: 25px;
     height: 25px;
     border: none;
@@ -73,7 +73,7 @@
     height: 25px;
     width: 100%;
     border: none;
-  }
+  } */
 }
 
 @include mq-max(991px) {
