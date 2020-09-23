@@ -3,6 +3,10 @@
   flex-flow: row nowrap;
   justify-content: center;
 
+  &_Start {
+    justify-content: flex-start;
+  }
+
   &-Link {
     width: 30px;
     height: 30px;

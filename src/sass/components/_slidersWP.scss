@@ -1,0 +1,103 @@
+/**
+  style for MetaSlider plugin for Wordpress
+  */
+
+.VgshaSlider {
+  .flex-control-paging {
+    li a {
+      width: 20px;
+      height: 20px;
+      background-color: $secondary-bg;
+      border: 1px solid $primary-active-elements;
+      opacity: 0.8;
+      transition: background-color 0.2s ease-out;
+
+      &:hover {
+        background-color: $primary-active-elements;
+      }
+
+      &.flex-active {
+        background-color: $primary-active-elements;
+      }
+    }
+  }
+
+  &_Carousel.metaslider {
+    .flex-control-nav {
+      bottom: -35px;
+    }
+  }
+
+  &_Partners {
+    ul.slides {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_MainPage.metaslider {
+    margin-top: 50px;
+
+    .caption-wrap {
+      top: 50%;
+      bottom: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      padding: 20px;
+      background-color: $primary-accent-4;
+      opacity: 1;
+      color: $secondary-text;
+      line-height: normal;
+      border-radius: $border-radius;
+    }
+
+    .flex-control-nav {
+      bottom: 12px;
+    }
+
+    .flex-direction-nav a {
+      width: auto;
+      height: auto;
+    }
+
+    .flexslider .flex-direction-nav li a {
+      background-color: $primary-accent-4;
+      width: auto;
+      height: auto;
+      padding: 5px 10px;
+      margin: 0;
+      background-image: none;
+      background-repeat: none;
+      transform: translateY(-50%);
+      border-radius: $border-radius;
+      text-indent: 0;
+      @extend %fa-icon;
+      @extend .fas;
+
+      &.flex-prev:after,
+      &.flex-next:after {
+        color: $secondary-text;
+        font-size: 2.2rem;
+      }
+
+      &.flex-prev:after {
+        content: fa-content($fa-var-chevron-left);
+      }
+
+      &.flex-next:after {
+        content: fa-content($fa-var-chevron-right);
+      }
+
+      .flexslider:focus-within .flex-prev,
+      .flexslider:hover .flex-prev {
+        left: 10px;
+      }
+
+      .flexslider:focus-within .flex-next,
+      .flexslider:hover .flex-next {
+        right: 10px;
+      }
+    }
+  }
+}

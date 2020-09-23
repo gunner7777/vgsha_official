@@ -2,6 +2,7 @@ $black: #222222;
 $white: #ffffff;
 //$brown: #801336;
 $brown: #760c0c;
+$brown_opacity: rgba(#760c0c, 0.5);
 $red: #c72c41;
 
 $vk: rgba(72, 114, 163, 1);
@@ -16,5 +17,6 @@ $primary-active-elements: $red;
 $primary-accent-1: $red;
 $primary-accent-2: $brown;
 $primary-accent-3: $black;
+$primary-accent-4: $brown_opacity;
 $secondary-text: $white;
 $secondary-bg: $white;
