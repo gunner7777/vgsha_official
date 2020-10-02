@@ -1,0 +1,15 @@
+.Rubrics {
+  &-Title {
+    font-size: 2rem;
+    color: $primary-text;
+    margin-bottom: 30px;
+  }
+}
+
+@include mq-max(991px) {
+  .Rubrics {
+    &-Title {
+      font-size: 1.6rem;
+    }
+  }
+}

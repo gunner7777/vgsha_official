@@ -42,5 +42,13 @@ Text Domain: seyatel
 @import "./components/footer";
 @import "./components/footerSection";
 @import "./components/copyright";
-@import "./components/slidersWP";
 @import "./components/gotoup";
+
+/** for wordpress style */
+@import "./components/slidersWP";
+@import "./components/content";
+@import "./components/rubrics";
+@import "./components/articleView";
+@import "./components/pageNav";
+@import "./components/vggrid";
+@import "./components/sidebarBlock";

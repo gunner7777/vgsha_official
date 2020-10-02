@@ -1,0 +1,31 @@
+.Content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &-Main {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &-Main_HaveSidebar {
+    padding-right: 15px;
+  }
+
+  &-Sidebar {
+    padding-right: 0;
+    padding-left: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+@include mq-max(991px) {
+  .Content {
+    &-Main {
+      order: 2;
+      padding-right: 0;
+    }
+    &-Sidebar {
+      order: 1;
+      padding-left: 0;
+    }
+  }
+}

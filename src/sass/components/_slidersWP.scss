@@ -101,3 +101,14 @@
     }
   }
 }
+
+@include mq-max(700px) {
+  .VgshaSlider {
+    &_MainPage.metaslider {
+      // do responsive
+      // common style for slides
+      // h3
+      // p
+    }
+  }
+}

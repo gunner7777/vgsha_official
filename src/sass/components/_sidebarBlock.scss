@@ -1,0 +1,41 @@
+.SidebarBlock {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-Title {
+    margin-bottom: 10px;
+  }
+
+  ul.menu {
+    .menu-item {
+      position: relative;
+      &:not(:last-child):after {
+        content: "";
+        width: 60%;
+        height: 1px;
+        background-color: $primary-active-elements;
+        position: absolute;
+        bottom: 0;
+        left: 14px;
+      }
+
+      a {
+        display: block;
+        padding: 7px 14px;
+        color: $primary-active-elements;
+        font-weight: 500;
+        border-radius: $border-radius;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          color: #fff;
+          background-color: $primary-active-elements;
+          //border-bottom: 1px solid $primary-accent-2;
+        }
+      }
+    }
+  }
+}

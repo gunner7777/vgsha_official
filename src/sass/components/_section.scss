@@ -6,6 +6,10 @@
   &-Title {
     margin-bottom: 25px;
     font-size: 1.6rem;
+
+    &_Inside {
+      font-size: 1.3rem;
+    }
   }
 
   &-ShowAll {
@@ -24,6 +28,10 @@
       color: $primary-accent-2;
       border-bottom: 1px solid $primary-accent-2;
     }
+
+    /* &_Inside {
+      font-size: 1.2rem;
+    } */
   }
 }
 
@@ -31,6 +39,10 @@
   .Section {
     &-Title {
       font-size: 1.4rem;
+
+      &_Inside {
+        font-size: 1.3rem;
+      }
     }
   }
 }
@@ -39,6 +51,12 @@
   .Section {
     &-ShowAll {
       font-size: 1.4rem;
+    }
+
+    &-Title {
+      &_Inside {
+        margin-bottom: 15px;
+      }
     }
   }
 }

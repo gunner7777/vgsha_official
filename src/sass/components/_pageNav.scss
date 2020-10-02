@@ -1,0 +1,19 @@
+.PageNav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  & .page-numbers {
+    font-size: 1rem;
+    color: $primary-text;
+    padding: 5px 10px;
+    margin: 0 4px;
+    border-radius: $border-radius;
+    transition: all 0.4s ease;
+
+    &.current,
+    &:hover {
+      background-color: $primary-active-elements;
+      color: $secondary-text;
+    }
+  }
+}

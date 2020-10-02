@@ -36,6 +36,34 @@
       //color: $primary-active-elements;
       background-color: $brown;
     }
+
+    &_Inside {
+      font-size: 1.1rem;
+    }
+  }
+
+  &-TitleBar {
+    &_Inside {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-ShowAll {
+    &_Inside {
+      min-width: 150px;
+      color: $primary-active-elements;
+      font-weight: 600;
+      transition: color ease 0.3s;
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:hover {
+        color: $primary-accent-2;
+      }
+    }
   }
 
   &-Date {
@@ -67,6 +95,19 @@
     &-Title {
       font-size: 1.2rem;
     }
+
+    &-TitleBar {
+      &_Inside {
+        flex-wrap: wrap;
+      }
+    }
+    &-ShowAll {
+      &_Inside {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 
@@ -90,6 +131,23 @@
   .News {
     &-Title {
       font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(380px) {
+  .News {
+    &-Title {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+@include mq-max(330px) {
+  .News {
+    &-Title {
+      font-size: 1.1rem;
     }
   }
 }

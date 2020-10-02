@@ -1,0 +1,78 @@
+.VgGrid {
+  display: flex;
+  flex-flow: row wrap;
+
+  &_Center {
+    justify-content: center;
+  }
+
+  &_Left {
+    justify-content: flex-start;
+  }
+
+  &_SpaceBetween {
+    justify-content: space-between;
+  }
+
+  &_Right {
+    justify-content: flex-end;
+  }
+
+  &-Item {
+    margin-bottom: 30px;
+  }
+
+  &-Link {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary-active-elements;
+
+      .VgGrid-TextBlock {
+        color: $secondary-text;
+      }
+    }
+  }
+
+  &-TextBlock {
+    padding: 15px;
+    color: $primary-text;
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .VgGrid {
+    &-TextBlock {
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .VgGrid {
+    &-TextBlock {
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@include mq-max(350px) {
+  .VgGrid {
+    &-TextBlock {
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
