@@ -29,3 +29,9 @@
     }
   }
 }
+
+@include mq-max(920px) {
+  .Content {
+    margin-top: 15px;
+  }
+}

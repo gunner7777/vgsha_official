@@ -24,13 +24,16 @@
   &-Title {
     //margin-bottom: 10px;
     position: absolute;
-    top: -10px;
+    /* top: -10px; */
     background-color: $red;
     padding: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: $secondary-text;
     font-weight: 600;
     transition: background-color ease 0.3s;
+    /* max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis; */
 
     &:hover {
       //color: $primary-active-elements;
@@ -92,9 +95,9 @@
       }
     }
 
-    &-Title {
+    /* &-Title {
       font-size: 1.2rem;
-    }
+    } */
 
     &-TitleBar {
       &_Inside {
@@ -123,6 +126,8 @@
 
     &-Title {
       font-size: 1.3rem;
+      position: relative;
+      top: 0;
     }
   }
 }
@@ -135,14 +140,14 @@
   }
 }
 
-@include mq-max(380px) {
+/* @include mq-max(380px) {
   .News {
     &-Title {
       position: relative;
       top: 0;
     }
   }
-}
+} */
 
 @include mq-max(330px) {
   .News {

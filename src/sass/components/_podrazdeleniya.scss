@@ -3,6 +3,10 @@
   flex-flow: row wrap;
   justify-content: space-between;
 
+  &-Outer {
+    margin-bottom: 100px;
+  }
+
   &-Item {
     width: 24%;
   }

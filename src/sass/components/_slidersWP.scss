@@ -36,7 +36,7 @@
   }
 
   &_MainPage.metaslider {
-    margin-top: 50px;
+    //margin-top: 50px;
 
     .caption-wrap {
       top: 50%;
@@ -102,13 +102,85 @@
   }
 }
 
-@include mq-max(700px) {
+@include mq-max(767px) {
   .VgshaSlider {
     &_MainPage.metaslider {
-      // do responsive
-      // common style for slides
-      // h3
-      // p
+      .caption-wrap {
+        width: 90%;
+
+        .caption {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .VgshaSlider {
+    &_MainPage.metaslider {
+      .caption-wrap {
+        width: 95%;
+        .caption {
+          font-size: 12px;
+        }
+      }
+      .flex-control-nav {
+        bottom: 4px;
+      }
+    }
+  }
+}
+
+@include mq-max(450px) {
+  .VgshaSlider {
+    .flex-control-paging {
+      li a {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &_MainPage.metaslider {
+      .caption-wrap {
+        width: 95%;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+      }
+
+      .flexslider .flex-direction-nav li a {
+        &.flex-prev:after,
+        &.flex-next:after {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+@include mq-max(400px) {
+  .VgshaSlider {
+    &_MainPage.metaslider {
+      .caption-wrap {
+        .caption {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@include mq-max(300px) {
+  .VgshaSlider {
+    &_MainPage.metaslider {
+      .caption-wrap {
+        top: 7px;
+        padding: 7px;
+        .caption {
+          font-size: 10px;
+        }
+      }
     }
   }
 }

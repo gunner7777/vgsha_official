@@ -3,7 +3,7 @@
   flex-flow: row nowrap;
   justify-content: center;
 
-  &_Start {
+  &_Footer {
     justify-content: flex-start;
   }
 
@@ -107,6 +107,11 @@
     &-Link {
       margin-right: 7px;
     }
+
+    &_Footer {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }
 
@@ -116,6 +121,11 @@
     margin-left: 0px;
     width: 49%;
     justify-content: flex-end;
+
+    &_Footer {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 }
 
