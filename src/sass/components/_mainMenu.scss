@@ -75,7 +75,9 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 10px;
+      //right: 10px;
+      right: 0;
+      padding: 8px 15px;
       font-size: 2rem;
       cursor: pointer;
       z-index: 5;
@@ -99,6 +101,9 @@
 
     &-Outer {
       background-color: transparent;
+      background-image: url(../images/wheat-bg.png);
+      background-repeat-y: no-repeat;
+      background-position-y: center;
     }
 
     &_Show {

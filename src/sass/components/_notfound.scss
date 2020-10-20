@@ -1,0 +1,35 @@
+.NotFound {
+  margin-bottom: 30px;
+
+  &-Title {
+    font-size: 7rem;
+  }
+
+  &-SubTitle {
+    font-size: 2rem;
+  }
+}
+
+@include mq-max(992px) {
+  .NotFound {
+    &-Title {
+      font-size: 4rem;
+    }
+
+    &-SubTitle {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .NotFound {
+    &-Title {
+      font-size: 3rem;
+    }
+
+    &-SubTitle {
+      font-size: 1rem;
+    }
+  }
+}

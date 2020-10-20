@@ -1,4 +1,22 @@
+function TopscrollTo() {
+  if (window.scrollY != 0) {
+    setTimeout(function () {
+      window.scrollTo(0, window.scrollY - 300);
+      TopscrollTo();
+    }, 20);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  const firstBlockHeight = 600;
+  const goToUp = document.querySelector(".GoToUp");
+
+  goToUpButton(goToUp, firstBlockHeight);
+
+  window.addEventListener("scroll", function () {
+    goToUpButton(goToUp, firstBlockHeight);
+  });
+
   //first bootstrap
   var windowWidth = window.innerWidth;
 
@@ -67,6 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  /* LK menu in topBar */
+  const serviceIcon = document.querySelector('.TopBarServices-Group_EnterServices');
+  serviceIcon.addEventListener('mouseenter', (event) => {
+    if(event.target.classList.contains('TopBarServices-Group_EnterServices') || event.target.classList.contains('ServiceMenu')) {
+      document.querySelector('.ServiceMenu').classList.add('ServiceMenu_Active');
+    }
+  });
+  serviceIcon.addEventListener('mouseleave', (event) => {
+    if(!event.target.classList.contains('TopBarServices-Group_EnterServices') || !event.target.classList.contains('ServiceMenu')) {
+      document.querySelector('.ServiceMenu').classList.remove('ServiceMenu_Active');
+    }
+  });
+  serviceIcon.addEventListener('click', (event) => {
+    console.log('click', event.target);
+    if(event.target.classList.contains('TopBarServices-Group_EnterServices') || event.target.classList.contains('ServiceMenu')) {
+      document.querySelector('.ServiceMenu').classList.toggle('ServiceMenu_Active');
+    }
+  });
 });
 
 const menuResetOnWindowResize = () => {
@@ -79,3 +116,11 @@ const menuResetOnWindowResize = () => {
     mmlink.classList.remove("MainMenu-Link_Open");
   });
 };
+
+function goToUpButton(gtu, fbh) {
+  if (pageYOffset > fbh) {
+    gtu.classList.add("GoToUp_Show");
+  } else {
+    gtu.classList.remove("GoToUp_Show");
+  }
+}

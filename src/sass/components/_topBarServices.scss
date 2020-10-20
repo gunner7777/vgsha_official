@@ -13,9 +13,9 @@
     margin-left: 15px;
     cursor: pointer;
 
-    &:nth-of-type(1) {
+    /*  &:nth-of-type(1) {
       margin-left: 7px;
-    }
+    } */
 
     &_Search {
       &:before {
@@ -32,10 +32,16 @@
       }
     }
     &_EnterServices {
+      pointer-events: none;
+
       &:before {
         content: fa-content($fa-var-user);
       }
     }
+  }
+
+  &-Group {
+    position: relative;
   }
 
   /* &-Search {
@@ -80,23 +86,10 @@
   .TopBarServices {
     width: 49%;
     justify-content: flex-start;
-  }
-}
+    //position: relative;
 
-@include mq-max(767px) {
-  .TopBarServices {
-    /* &-Search {
-      display: block;
-    } */
-
-    /* &-Icon {
-      &_Search {
-        display: none;
-      }
-    } */
-
-    /* &-SearchHide {
-      display: none;
+    /* &-Group {
+      position: inherit;
     } */
   }
 }

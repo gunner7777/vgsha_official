@@ -98,10 +98,14 @@
     }
 
     h3:not(.VgGrid-TextBlock > h3) {
+      margin-top: 25px;
       margin-bottom: 20px;
     }
+    h4 {
+      margin-top: 25px;
+    }
 
-    a:not(.VgGrid-Link):not(.ArticleView-Readmore):not([href$=".jpg"]):not([href$=".png"]):not(.wp-block-file__button) {
+    a:not(.VgGrid-Link):not(.ArticleView-Readmore):not([href$=".jpg"]):not([href$=".png"]):not(.wp-block-file__button):not(.ui-tabs-anchor) {
       font-weight: 600;
       color: $primary-active-elements;
       border-bottom: 2px solid transparent;
@@ -125,7 +129,7 @@
         margin-bottom: 10px;
         line-height: 1.5rem;
 
-        &:before {
+        &:not(.tabs-nav):before {
           content: "-";
           color: $primary-text;
           position: absolute;
@@ -140,6 +144,7 @@
 
       td {
         padding: 8px;
+        line-height: 1.5;
       }
     }
 

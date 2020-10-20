@@ -1,0 +1,83 @@
+.ServiceMenu {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 460px;
+  background-color: $secondary-bg;
+  border: 1px solid $primary-accent-2;
+  box-shadow: 0 0 3px 1px rgba($primary-accent-2, 0.35);
+  padding: 15px;
+  z-index: 200;
+
+  &_Active {
+    display: block;
+  }
+
+  &-Item {
+    margin-top: 10px;
+
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
+
+  &-Link {
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    color: $primary-text;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-active-elements;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .ServiceMenu {
+    //width: 345px;
+    right: 50%;
+    transform: translateX(25%);
+  }
+}
+
+@include mq-max(767px) {
+  .ServiceMenu {
+    transform: translateX(29%);
+  }
+}
+
+@include mq-max(575px) {
+  .ServiceMenu {
+    width: 345px;
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+@include mq-max(420px) {
+  .ServiceMenu {
+    transform: translateX(11%);
+  }
+}
+
+@include mq-max(378px) {
+  .ServiceMenu {
+    width: 250px;
+  }
+}
+
+@include mq-max(300px) {
+  .ServiceMenu {
+    transform: translateX(4%);
+  }
+}
+
+@include mq-max(266px) {
+  .ServiceMenu {
+    width: 200px;
+  }
+}

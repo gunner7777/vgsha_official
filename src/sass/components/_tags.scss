@@ -10,11 +10,13 @@
     & > a {
       display: block;
       padding: 5px 10px;
+      max-width: 160px;
       border: 1px solid $primary-active-elements;
       border-radius: $border-radius;
       color: $primary-active-elements;
       transition: all ease-out 0.3s;
       font-size: 0.9rem;
+      word-wrap: break-word;
 
       &:hover {
         border: 1px solid $primary-accent-2;
@@ -27,11 +29,3 @@
     }
   }
 }
-
-/* @include mq-max(575px) {
-  .Tags {
-    &-Item {
-      font-size: 0.9rem;
-    }
-  }
-} */
