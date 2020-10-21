@@ -84,7 +84,7 @@
     }
   }
   &-Article {
-    p {
+    p:not(.Abiturient-FacTitle):not(.Abiturient-ProfilTitle):not(.Abiturient-ImpInfoLine) {
       margin-top: 20px;
       margin-bottom: 20px;
       line-height: 1.5rem;
@@ -105,7 +105,8 @@
       margin-top: 25px;
     }
 
-    a:not(.VgGrid-Link):not(.ArticleView-Readmore):not([href$=".jpg"]):not([href$=".png"]):not(.wp-block-file__button):not(.ui-tabs-anchor) {
+    a:not(.VgGrid-Link):not(.ArticleView-Readmore):not([href$=".jpg"]):not([href$=".png"]):not(.wp-block-file__button)
+      :not(.ui-tabs-anchor):not(.Abiturient-Link):not(.Abiturient-Link):not(.Abiturient-FacTitle):not(.Abiturient-FacImg) {
       font-weight: 600;
       color: $primary-active-elements;
       border-bottom: 2px solid transparent;
