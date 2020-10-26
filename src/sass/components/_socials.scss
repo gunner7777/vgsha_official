@@ -134,5 +134,9 @@
     width: 100%;
     justify-content: center;
     order: 3;
+
+    &_Footer {
+      justify-content: flex-start;
+    }
   }
 }

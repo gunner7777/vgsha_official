@@ -226,3 +226,13 @@
     }
   }
 }
+
+@include mq-max(600px) {
+  .ArticleView {
+    &-Article {
+      .wp-block-media-text__content {
+        margin-top: 20px;
+      }
+    }
+  }
+}

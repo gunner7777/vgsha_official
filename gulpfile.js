@@ -16,9 +16,10 @@ const imagemin = require("gulp-imagemin");
 sass.compiler = require("node-sass");
 
 /* files path */
-const normalizeCss = "./node_modules/normalize.css/normalize.css";
+//const normalizeCss = "./node_modules/normalize.css/normalize.css";
 const scssIn = "./src/sass/**/*.scss";
-const stylePath = [normalizeCss, scssIn];
+//const stylePath = [normalizeCss, scssIn];
+const stylePath = [scssIn];
 const scssOut = "./build/css";
 const jsIn = "./src/js/*.js";
 const jsOut = "./build/js";
