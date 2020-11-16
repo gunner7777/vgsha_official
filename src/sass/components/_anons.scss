@@ -45,7 +45,8 @@
       text-align: center;
       color: $secondary-text;
       padding: 4px;
-      max-width: 100px;
+      //max-width: 100px;
+      display: inline-block;
     }
   }
 }
