@@ -8,6 +8,7 @@
     max-width: 180px;
     width: 180px;
     margin-right: 25px;
+    animation: blink 5s 1 ease-in-out;
   }
 
   &-Text {
@@ -16,6 +17,7 @@
     color: $primary-text;
     min-width: 600px;
     width: 50%;
+    animation: blink 5s 1 ease-in-out;
   }
 
   &-Title {
@@ -115,5 +117,44 @@
     &-Title {
       font-size: 1rem;
     }
+  }
+}
+
+@keyframes blink {
+  10% {
+    opacity: 0.2;
+    color: rgba($primary-text, 0.2);
+  }
+  12% {
+    opacity: 1;
+    color: rgba($primary-text, 1);
+  }
+  20% {
+    opacity: 0.2;
+    color: rgba($primary-text, 0.2);
+  }
+  22% {
+    opacity: 1;
+    color: rgba($primary-text, 1);
+  }
+  /* 30% {
+    opacity: 0.2;
+    color: rgba($primary-text, 0.2);
+  }
+  34% {
+    opacity: 1;
+    color: rgba($primary-text, 1);
+  } */
+  40% {
+    opacity: 0;
+    color: rgba($primary-text, 0);
+  }
+  70% {
+    opacity: 0.6;
+    color: rgba($primary-text, 0.6);
+  }
+  80% {
+    opacity: 1;
+    color: rgba($primary-text, 1);
   }
 }
