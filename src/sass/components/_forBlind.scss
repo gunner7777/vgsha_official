@@ -1,0 +1,10 @@
+html body .bvi-body[data-bvi-font-family="times"] *:not(i):not(span):before,
+html body .bvi-body[data-bvi-font-family="arial"] *:not(i):not(span):before {
+  font-family: "Font Awesome 5 Free";
+}
+
+#bvi-tts-true,
+#bvi-tts-false,
+.bvi-link-copy {
+  display: none;
+}
