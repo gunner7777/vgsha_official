@@ -68,7 +68,7 @@
   }
 }
 
-@include mq-max(920px) {
+@include mq-max(932px) {
   .MobileMenu {
     &-Button {
       display: block;
@@ -122,8 +122,6 @@
       height: auto;
       line-height: 1rem;
       padding: 15px 0;
-      /* padding-right: 15px;
-      padding-left: 15px; */
 
       &:hover {
         border-top: none;

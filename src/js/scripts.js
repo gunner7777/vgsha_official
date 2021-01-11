@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //first bootstrap
   var windowWidth = window.innerWidth;
 
-  changeSiteTitle();
-
   window.addEventListener("resize", function () {
     windowWidth = window.innerWidth;
     menuResetOnWindowResize();
@@ -125,18 +123,4 @@ function goToUpButton(gtu, fbh) {
   } else {
     gtu.classList.remove("GoToUp_Show");
   }
-}
-
-function changeSiteTitle() {
-  const subtitle = document.querySelector('.Logo-SubTitle');
-  const title = document.querySelector('.Logo-Title');
-  const logo = document.querySelector('.Logo-Img');
-  const logoPathArr = logo.src.split('/');
-
-  setTimeout(function() {
-    subtitle.innerHTML = "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ";
-    title.innerHTML = '"ВЯТСКИЙ ГОСУДАРСТВЕННЫЙ АГРОТЕХНОЛОГИЧЕСКИЙ УНИВЕРСИТЕТ"';
-    logoPathArr[logoPathArr.length - 1] = "vgatu_logo.png";
-    logo.src = logoPathArr.join('/');
-  }, 2050);
 }
