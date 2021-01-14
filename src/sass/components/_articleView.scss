@@ -162,6 +162,15 @@
       }
     }
 
+    .wp-block-group {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .wp-block-column .wp-block-image img {
+      width: auto;
+    }
+
     .wp-block-embed {
       &.aligncenter {
         .wp-block-embed__wrapper {

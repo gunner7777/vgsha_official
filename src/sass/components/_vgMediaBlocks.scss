@@ -1,0 +1,35 @@
+.VgMediaBlocks {
+  &-Item {
+    margin-bottom: 20px;
+
+    &_JIC {
+      align-items: center;
+    }
+
+    &_FS {
+      align-items: flex-start;
+    }
+  }
+
+  &-Description {
+    p,
+    a {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .VgMediaBlocks {
+    &-Img {
+      margin-bottom: 10px;
+    }
+    &-Description {
+      text-align: center;
+      p,
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+}
