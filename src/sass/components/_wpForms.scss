@@ -1,0 +1,18 @@
+.WpForms {
+  &-Submit {
+    border: 1px solid $primary-active-elements !important;
+    border-radius: $border-radius !important;
+    background-color: $secondary-text !important;
+    color: $primary-active-elements !important;
+
+    &:hover {
+      background-color: $primary-active-elements !important;
+      color: $secondary-text !important;
+    }
+  }
+
+  &-Textarea textarea,
+  &-Input input {
+    border: 1px solid $primary-active-elements !important;
+  }
+}
