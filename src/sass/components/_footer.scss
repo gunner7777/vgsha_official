@@ -17,3 +17,10 @@
     position: relative;
   } */
 }
+
+@include mq-max(450px) {
+  .Footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
