@@ -1,0 +1,29 @@
+.CloudTags {
+  margin-bottom: 25px;
+
+  &-Item {
+    margin-bottom: 12px;
+    margin-right: 12px;
+
+    & > a {
+      display: block;
+      padding: 7px 14px;
+      font-size: 1.1rem;
+      max-width: none;
+    }
+
+    &:last-child {
+      margin-right: 12px;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .CloudTags {
+    &-Item {
+      & > a {
+        font-size: 1rem;
+      }
+    }
+  }
+}
